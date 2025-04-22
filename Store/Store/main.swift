@@ -12,23 +12,23 @@ protocol SKU {
     func price() -> Int
 }
 
-class Item {
-    class Item: SKU {
-         var name : String
-         var priceEach : Int
-         
-         init(name: String, priceEach: Int) {
-             self.name = name
-             self.priceEach = priceEach
-         }
-         
-         func price() -> Int {
-             return priceEach
-         }
+
+class Item: SKU {
+     var name : String
+     var priceEach : Int
+     
+     init(name: String, priceEach: Int) {
+         self.name = name
+         self.priceEach = priceEach
      }
+     
+     func price() -> Int {
+         return priceEach
+     }
+ }
     
     
-}
+
 
 class Receipt {
     var scannedItems : [SKU] = []

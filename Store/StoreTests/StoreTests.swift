@@ -50,7 +50,7 @@ TOTAL: $1.99
         XCTAssertEqual(199, register.subtotal())
         register.scan(Item(name: "Pencil", priceEach: 99))
         XCTAssertEqual(298, register.subtotal())
-        register.scan(Item(name: "Granols Bars (Box, 8ct)", priceEach: 499))
+        register.scan(Item(name: "Granola Bars (Box, 8ct)", priceEach: 499))
         XCTAssertEqual(797, register.subtotal())
         
         let receipt = register.total()
@@ -60,7 +60,7 @@ TOTAL: $1.99
 Receipt:
 Beans (8oz Can): $1.99
 Pencil: $0.99
-Granols Bars (Box, 8ct): $4.99
+Granola Bars (Box, 8ct): $4.99
 ------------------
 TOTAL: $7.97
 """
